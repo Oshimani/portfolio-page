@@ -1,0 +1,78 @@
+.fancy-form {
+    .heading {
+        border-left: 1px solid #fccc4c;
+        border-right: 1px solid #fccc4c;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 18px;
+    }
+    .input-box {
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: #1d2b3a;
+            border-radius: 5px;
+            outline: none;
+            color: #fccc4c;
+            font-size: 1em;
+            transition: 0.3s;
+
+            &:valid,
+            &:focus {
+                border: 1px solid #fccc4c;
+            }
+        }
+        span {
+            position: absolute;
+            left: 0;
+            padding: 10px;
+            pointer-events: none;
+            font-size: 1em;
+            color: #ffffff40;
+            text-transform: uppercase;
+            transition: 0.3s;
+            border-left: 1px solid transparent;
+            border-right: 1px solid transparent;
+        }
+        input:valid ~ span,
+        input:focus ~ span {
+            color: #fccc4c;
+            transform: translate(10px, -7px);
+            font-size: 0.65em;
+            padding: 0 10px;
+            background: #1d2b3a;
+            border-left: 1px solid #fccc4c;
+            border-right: 1px solid #fccc4c;
+        }
+
+        &:nth-child(2) {
+            input:valid ~ span,
+            input:focus ~ span {
+                background-color: #fccc4c;
+                color: #1d2b3a;
+            }
+        }
+    }
+    button {
+        padding: 10px;
+        border-radius: 5px;
+        color: #ffffff40;
+        background-color: #1d2b3a;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        transition: 0.3s;
+
+        &:hover,
+        &:focus {
+            color: #fccc4c;
+            border: 1px solid #fccc4c;
+        }
+        &:active {
+            color: #1d2b3a;
+            background-color: #fccc4c;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
