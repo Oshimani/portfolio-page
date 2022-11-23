@@ -44,7 +44,7 @@ const NavMenu: FC<{ href: string, children: ReactNode, menuChildren: ReactNode[]
     const { children, href, menuChildren } = props
     return (
         <div className="relative">
-            <NavLink className="peer" href={href}>{children}</NavLink>
+            <NavLink className="peer block" href={href}>{children}</NavLink>
             <div className="transition-opacity opacity-0 pointer-events-none peer-hover:pointer-events-auto hover:pointer-events-auto hover:opacity-100 peer-hover:opacity-100 absolute top-12 left-0 right-0 z-10">
                 <ul className="bg-black bg-opacity-50 backdrop-blur-sm text-center rounded-lg">
                     {menuChildren.map((item, i) => (<li className="w-full py-6" key={i}>{item}</li>))}
