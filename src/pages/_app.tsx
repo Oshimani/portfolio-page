@@ -4,7 +4,7 @@ import { SessionProvider } from "next-auth/react";
 
 import { trpc } from "../utils/trpc";
 
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import "../styles/effects.scss";
 import "../styles/pages/showcase/fancy-form.scss";
 

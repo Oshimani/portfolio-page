@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.next-error-h1 {
+    color: #fccc4c;
+    font-size: 4rem !important;
+    border-color: #fccc4c60 !important;
+    & + div {
+        color: #fccc4c;
+        h2 {
+            font-size: 1.3rem !important;
+            text-transform: uppercase !important;
+        }
+    }
+}
