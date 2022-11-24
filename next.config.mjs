@@ -13,5 +13,18 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  headers: async () => {
+    return [
+      {
+        source: "/(.*?)",
+        headers: [
+          {
+            key: "Content-Security-Policy-Report-Only",
+            value: "require-trusted-types-for 'script'"
+          }
+        ]
+      }
+    ]
+  }
 };
 export default config;
