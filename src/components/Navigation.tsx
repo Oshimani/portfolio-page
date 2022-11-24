@@ -1,5 +1,7 @@
-import Link from 'next/link'
 import { type FC, type ReactNode, type HTMLAttributes } from 'react'
+import Link from 'next/link'
+
+import { twMerge } from "tailwind-merge"
 
 const Navigation = () => {
     return (
@@ -27,12 +29,13 @@ const Navigation = () => {
 
 export default Navigation
 
+//  NAV LINK FOR SIMPLE LINK WITH HREF
 const NavLink: FC<{ href: string, children: ReactNode } & HTMLAttributes<HTMLAnchorElement>> = (props) => {
     const { href, children, className, ...rest } = props
 
     return (
         <Link {...rest}
-            className={`px-4 py-1 text-4xl font-thin text-[#fccc4c] link-hover ${className}`}
+            className={twMerge("px-4 py-1 text-4xl font-thin text-[#fccc4c] link-hover", className)}
             href={href}
         >
             {children}
@@ -40,6 +43,7 @@ const NavLink: FC<{ href: string, children: ReactNode } & HTMLAttributes<HTMLAnc
     )
 }
 
+// NAV ELEMENT WITH DROPDOWP MENU FOR MULTIPLE CHILD-LINKS + OWN HREF
 const NavMenu: FC<{ href: string, children: ReactNode, menuChildren: ReactNode[] }> = (props) => {
     const { children, href, menuChildren } = props
     return (
