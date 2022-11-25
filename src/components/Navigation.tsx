@@ -12,6 +12,7 @@ const Navigation = () => {
                 <NavMenu href="/showcase"
                     menuChildren={[
                         <NavLink className="text-lg block w-full" key="ff" href="/showcase/fancy-form">Fancy Form</NavLink>,
+                        <NavLink className="text-lg block w-full" key="ff" href="/showcase/tw-startpage-clone">Tailwind Startpage Clone</NavLink>,
                         <NavLink className="text-lg block w-full" key="ff" href="/showcase/fancy-form">Time Tracker</NavLink>,
                         <NavLink className="text-lg block w-full" key="ff" href="/showcase/fancy-form">Steam Screenshot Backup</NavLink>,
                         <NavLink className="text-lg block w-full" key="ff" href="/showcase/fancy-form">MTB-Classification with Keras</NavLink>

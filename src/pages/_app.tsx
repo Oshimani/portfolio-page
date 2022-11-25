@@ -7,6 +7,7 @@ import { trpc } from "../utils/trpc";
 import "../styles/globals.scss";
 import "../styles/effects.scss";
 import "../styles/pages/showcase/fancy-form.scss";
+import "../styles/pages/showcase/tw-startpage-clone.scss";
 
 import Navigation from "../components/Navigation";
 
